@@ -1979,7 +1979,7 @@ intersection = game.new_location(
 No one is in sight.  While deciding what to do, you hear what you think is someone calling your name. Panicked, you must figure out where to go...and fast.\n""")
 
 i1_n1 = game.new_location(
-"Staircase {n,up}",
+"Cooridoor {n,up}",
 """At the top of the stairs there are three rooms. The room on the left has been boarded up. The door in the middle has a lock on the doorknob. You would need a key. You hear music coming from the room on the right. Almost as if someone has a music box. \n""")
 
 il_sl = game.new_location(
@@ -1993,33 +1993,39 @@ il_sl = game.new_location(
 """This room is locked. A key is required to get in. You thing you can hear someone on the other side. It sounds like a little girl. She is screaming. You feel inclined to help her.\n"""
 """You enter the library. Books line the walls. Two things seem off to you. The first being that there was screaming coming from the room, but now, no one is here. Also, the back wall is covered in blood. It looks like someone was shot in the head. But there's more blood than just that. What is going on?\n""")
 
-i1_s1 = game.new_location(
-"Tunnel {n,s}",
-"""You head north from the intersection, hoping to find some of your
-fellow miners.  Worry starts to creep into your head.\n""")
+il_sl = game.new_location(
+  "Bedroom {n, e}, 
+  """The room looks different from all the others you have encountered. It is a bedroom, clean and neat. Though the rest of the house looked like it hadn't been touched in years, this room looked like it hadn't been touched in minutes. The music you were hearing was coming from a box that is sitting on the side table. You go to turn the music box off. After turning it off you turn around and the room is in the unkept, dusty manor you would have expected. Maybe your mind was playing tricks on you and it was like that all along. You hear footsteps from all throughout the house. They are running.\n"""
 
+  i1_s1 = game.new_location(
+"Nursery {n,e}",
+"""A little girl is sitting on the floor, facing away from you. She hears you come in. "Have you brought something for me to play with?" She asks.\n""")
+
+  #If it's not the bike
+  """The girl looks at you and screams "THIS REMINDS ME OF HER! HOW DARE YOU!" She strikes you so hard, you start to black out...\n"""
+  player.terminate
+  
+  #If it is the bike
+  """The girl smiles at you. "Oh boy! Now I can show you where I ride it!" You follow her to a door you never thought was there before. The door leads you outside. You turn around. There is no girl, no bike, and no door. However, you are outside, and you are safe. You have escaped.\n"""
+ 
+  
 i1_e1 = game.new_location(
-"Tunnel {e,w}",
-"""You head north from the intersection, hoping to find some of your
-fellow miners.  Worry starts to creep into your head.\n""")
+"The Parlor {n, w}",
+"""You enter what you think is an old parlor. There is a journal on the counter. You flip through the pages which reveal elaborate plots of murder. Plots of suicide. On the last page, a note. "To anyone reading this: GET OUT". Suddenly, pots and pans start falling off the walls. You need to find a way out.\n""")
 
 i1_n2 = game.new_location(
-"Dark Tunnel {n,s}",
-"""Continuing north from the intersection, you notice some footprints
-on the ground leading further into the tunnel, getting darker and darker.\n""")
+"Basement {n, down}",
+"""At the bottom of the stairs, it is pitch black. You begin to walk but soon stumble over something. A child's tricycle.\n""")
 
 i1_n3 = game.new_location(
-"Steep Inclined Tunnel {n,s}",
-"""It is getting oppressively dark as you notice the tunnel climbing upwards.
-You'll have to find a lightsource to continue forward.\n""")
-
+"Outside {n,s}",
+"""Your friends greet you. "Sorry man, we were getting worried! What happened?" You have no idea where to begin.\n""")
+#END GAME WOOO 
+  
 i1_n4 = game.new_location(
-"Mine Shaft {s, down}",
-"""Lighting the torch, you are able to continue to the end of this section
-of tunnel.  You slowly approach a verticle mine shaft that has fell into
-disrepair.\n
-You notice that there has been a newly made rope attached to a wooden crane
-arm, did someone go down?\n""")
+"Staircase {n, up, down}",
+  #Is that right? ^ I want it to work in both cases of there being stairs. 
+"""You begin to walk the staircase. It is old and creaks loudly whenever you walk. Out of the corner of your eye you think you see something. A woman? No way...You look again and nothing is there. This encourages you to hurry up the stairs. \n""")
 
 
 
